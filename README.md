@@ -1,7 +1,7 @@
 # Regex Tutorial
   
 ## Description:
-
+The Regex I will be focusing on are Emails. I will be breaking down an Email Regex based on the Table of Contents in order describe the purpose and which part of the code pertains to each topic. 
 
 ## User Story
 ```md
@@ -16,7 +16,6 @@ SO THAT I can understand the search pattern the regex defines
 - [Installation](#installation)
 - [Usage Instructions](#usage-instructions) 
 - [Usage Screenshots](#screenshots)
-- [Walkthrough Video](#walkthrough-video)
 - [Credits](#credits)  
 
 # Overview
@@ -35,17 +34,14 @@ THEN I find a section about the author and a link to the author’s GitHub profi
 ```
 
 ## Installation
-Git clone Repository: [SQL EMPLOYEE TRACKER](https://github.com/RyanSKang/SQL-Employee-Tracker)  
-Following Installation Needed:  
-    -Node.js [v16.16.0](https://nodejs.org/en/blog/release/v16.16.0)  
-    -mySQL2 [v3.4.3](https://www.npmjs.com/package/mysql2)  
-    -Inquirer [v8.2.4](https://www.npmjs.com/package/inquirer/v/8.2.4#installation)  
+- Git clone Repository: [regex-tutorial](https://github.com/RyanSKang/regex-tutorial)    
+- Open gist.md: [regex-tutoral gist rendered](https://gist.github.com/RyanSKang/c9335294d3874756133740c31d85dfc2)
 
 ## Usage Instructions
- 
+ -Follow along the gist.md to get an explanation of regex: Matching an email
 
 ## Screenshots
-
+-N/A
 
 ## Credits
 [Power of Regular Expression](https://www.hallme.com/blog/the-power-of-regular-expressions/)  

@@ -12,6 +12,7 @@ A regular expression (regex for short) is a sequence of characters that defines 
 
 * Text Manipulation
     * We can manipulate text by replacing specific patterns with other text/patterns
+
 ## Summary
 
 The Regex I will be focusing on are Emails. I will be breaking down an Email Regex based on the Table of Contents in order describe the purpose and which part of the code pertains to each topic. 
@@ -31,6 +32,8 @@ Example Code: `/^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/`
 - [Boundaries](#boundaries)
 - [Back-references](#back-references)
 - [Look-ahead and Look-behind](#look-ahead-and-look-behind)
+- [Credits](#credits)
+
 
 ## Regex Components
 
@@ -148,8 +151,15 @@ Example Code: `/^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/`
     * It matches the current position if the pattern inside the look-behind assertion matches, but it doesn't include the matched text in the overall match.
 4. Negative Look-Behind (?<!...):
     * It matches the current position if the pattern inside the negative look-behind assertion does not match.
-    
+
+## Credits
+- [Power of Regular Expression](https://www.hallme.com/blog/the-power-of-regular-expressions/)  
+- [Lookaround](https://www.regular-expressions.info/lookaround.html)  
+- [Boundaries](https://www.regular-expressions.info/wordboundaries.html)  
+- [Cheat Sheet](https://www.rexegg.com/regex-quickstart.html)  
+- [Coding Bootcamp](https://coding-boot-camp.github.io/full-stack/computer-science/regex-tutorial)  
 ## Author
 
 * Ryan Kang- DU Coding Student:    
 [My Github](https://github.com/RyanSKang/regex-tutorial)
+
