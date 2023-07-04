@@ -48,7 +48,11 @@ Following Installation Needed:
 
 
 ## Credits
-[Power of Regular Expression](https://www.hallme.com/blog/the-power-of-regular-expressions/)
+[Power of Regular Expression](https://www.hallme.com/blog/the-power-of-regular-expressions/)  
+[Lookaround](https://www.regular-expressions.info/lookaround.html)  
+[Boundaries](https://www.regular-expressions.info/wordboundaries.html)  
+[Cheat Sheet](https://www.rexegg.com/regex-quickstart.html)  
+[Coding Bootcamp](https://coding-boot-camp.github.io/full-stack/computer-science/regex-tutorial)  
 
 
 

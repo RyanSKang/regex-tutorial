@@ -92,17 +92,64 @@ Example Code: `/^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/`
         * The 'u' flag enables full Unicode matching. It allows the regex engine to handle Unicode characters properly, including support for Unicode code point matching and properties. 
 
 ### Grouping and Capturing
+* Grouping and capturing are techniques used to isolate and capture specific parts of a matched pattern
+    * Grouping uses paranthesis. Placing part of a regex pattern inside the parenthesis creates a group
+    * Capturing also uses paranthesis. When a group is created, the regex engine captures the text that matches the group.
+    * There are 3 groups created using paranthesis in our snippet of code: 
+        1. `([a-z0-9_\.-]+)`
+            * This group captures the username part of the email address
+        2. `([\da-z\.-]+)`
+            * This group captures the domain name part of the email address
+        3.`([a-z\.]{2,6})`
+            * This group captures the top-level domain part of the email address.
 
 ### Bracket Expressions
+* Character Classes are the same as Bracket Expressions. Using square brackets '[]' we specify a range or a list of characters to be matched. Please see Character Classes section of this gist. 
 
 ### Greedy and Lazy Match
+1. Greedy Matching
+    * Matching as much of the input as possible while still allowing the overall pattern to match. 
+2. Lazy Matching
+    * AKA non-greedy matching, appends the '?' to the quantifier. It tells the regex engine to match as little as possible while still allowing the pattern to match.
 
 ### Boundaries
+* Boundaries are special characters or assertions that define the start or end of a word, line, or input. Commonly used Boundaries: 
+    1. Word boundary '\b': 
+        * Matches the position between a word character (\w) and a non-word character (\W). 
+    2. Start of Line '^' and End of Line '$':
+        * The ^ matches the start of a line and the $ sign matches the end of a line. 
+    3. Start of Input '\A' and End of Input '\z':
+        * The anchor '\A' matches the absolute start of the input and '\z' matches the absolute end of the input. Similar to start of line and end of line. 
+    4. Word Start '\B' and Word End '\b':
+        * The '\B' matches posiution that are not word boundaries. Any position that is not between 2 word characters or between 2 non-word characters. 
 
 ### Back-references
+* Back-References allow us to refer to previously matched text and use it later in the same pattern or during replacement operations. Usually represented by the backslash '\' fullowed by a number or a name. 
+    1. Numeric Back References: 
+        * When using captured groups, each group is assigned a number starting from 1, based on the order of their opening. We can refer to these groups using '\n' where 'n' is the index of the group
+    2. Named Back References:
+        * When using captured groups, some can be named. You can refer to these groups using '\k"name"' 
 
+* In our snippet of code. We have three groups so we can back reference them using their index. Since we have 3 groups:
+        1. `([a-z0-9_\.-]+)`
+            * Back Reference '\1'
+        2. `([\da-z\.-]+)`
+            * Back Reference '\2'
+        3.`([a-z\.]{2,6})`
+            * Back Reference '\3'
 ### Look-ahead and Look-behind
+* Look ahead and look-behind, collectively called lookaround, mathces characters and only returns the result (match or no match). They only assert whether a match is possible or not. 
 
+1. Positive Look-Ahead (?=...): 
+    * It matches the current position if the pattern inside the look-ahead assertion matches, but it doesn't include the matched text in the overall match.
+2. Negative Look-Ahead (?!...):
+    * It matches the current position if the pattern inside the negative look-ahead assertion does not match.
+3. Positive Look-Behind (?<=...):
+    * It matches the current position if the pattern inside the look-behind assertion matches, but it doesn't include the matched text in the overall match.
+4. Negative Look-Behind (?<!...):
+    * It matches the current position if the pattern inside the negative look-behind assertion does not match.
+    
 ## Author
 
-A short section about the author with a link to the author's GitHub profile (replace with your information and a link to your profile)
+* Ryan Kang- DU Coding Student:    
+[My Github](https://github.com/RyanSKang/regex-tutorial)
