@@ -44,7 +44,7 @@ Example Code: `/^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/`
 * These anchors ensure that the entire email address matches the pattern from start to finish. Anchors make sure that the pattern does not contain any additional characters before or after the email address.
 
 ### Quantifiers
-*Regex quantifiers are symbols and/or metacharacters that specify the number of occurences of a preceding element within the pattern. Controlling the repetition or quantification of a character, group, or class within the pattern. 
+* Regex quantifiers are symbols and/or metacharacters that specify the number of occurences of a preceding element within the pattern. Controlling the repetition or quantification of a character, group, or class within the pattern. 
 * `/^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/`
     1. '+' (plus sign)- One or More Quantifier:
         * The plus sign is applied to the preceding element/group, indicating that it must occur one or more times. 
@@ -59,10 +59,37 @@ Example Code: `/^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/`
         * Here are the following groups the {2,6} range quantifier applies to within our snippet code:
             * `[a-z\.]`
 ### OR Operator
+* A regex OR operator allows us to specify multiple alternatives for matching a particular pattern. an OR operator is represented by the vertical bar '|'. There are 2 instances of the OR operator.
+    1. `[\da-z\.-]+`:
+        * This character sets matches one or more occurences of either a digit ('/d'), a lowercase letter ('[a-z]'), a dot ('\.'), or a hyphen ('-'). The OR operator allows any of these characters to be matched.
+    2. `[a-z\.]{2,6}`:
+        * This character set matches between 2-6 occurences of either a lowercase ('[a-z]') or a dot ('\.'). The OR operator allows either of these to be matched. 
+* In both cases, the OR operator provides alternatives within the character sets, allowing for different characters to be matched at those specific positions within the pattern. 
 
 ### Character Classes
+* Character classes are enclosed within square brackets '[]' and allow us to define a gorup of characters that can match a single character at the specific position in the pattern. 
+* Character classes are a way to specify a set of characters that can be matched at a particular position in a pattern
+* Here are the character classes within our snippet code: 
+    1. `[a-z0-9_\.-]`:
+        * This character class matches any lowercase letter, digit, underscore, period, or hyphen.
+    2. `[\da-z\.-]`:
+        * This character class matches any digit, lowercase letter, period, or hyphen.
+    3. `[a-z\.]`:
+        * This character class matches any lowercase letter or period. 
 
 ### Flags
+* Flags are optional modifiers that can be added after the closing delimiter of a regex pattern to modify the behavior of the pattern matching. There are no flags specified. 
+* Here are some commonly used flags in regex:
+    1. 'i'- Case Sensitive:
+        * The 'i' flag enables case-insensitive matching. Uppercase and lowercase letters are considered equivalent. 
+    2. 'g'- Global Search:
+        * The 'g' flag performs a global search. It will find all matches rather than stopping at the first match. 
+    3. 'm'- Multiline: 
+        * The 'm' flag enables multiline mode. The anchors '^' and '$' match the beginning and end of each line within the input text, rather than the entire input string.
+    4. 's'- Dotall or Single Line Mode: 
+        * The 's' flag modifies the behavior of the dot metacharacter. By default the dot matches any character except newline. With the 's' flag thhe dot matches any character including the newline. 
+    5. 'u'- Unicode: 
+        * The 'u' flag enables full Unicode matching. It allows the regex engine to handle Unicode characters properly, including support for Unicode code point matching and properties. 
 
 ### Grouping and Capturing
 

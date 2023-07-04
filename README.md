@@ -48,7 +48,7 @@ Following Installation Needed:
 
 
 ## Credits
--N/A
+[Power of Regular Expression](https://www.hallme.com/blog/the-power-of-regular-expressions/)
 
 
 
